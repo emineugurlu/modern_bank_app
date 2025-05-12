@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
+/* Tailwind Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Root Variables */
 :root {
   --black-gradient: linear-gradient(
     144.39deg,
@@ -14,10 +16,12 @@
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
+/* Base Styles */
 * {
   scroll-behavior: smooth;
 }
 
+/* Text Gradient Utility */
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
@@ -31,9 +35,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  color: transparent;
 }
 
+/* Background Gradients */
 .bg-blue-gradient {
   background: linear-gradient(
     157.81deg,
@@ -47,12 +52,7 @@
 }
 
 .bg-black-gradient {
-  background: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
+  background: var(--black-gradient);
 }
 
 .bg-black-gradient-2 {
@@ -76,42 +76,33 @@
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
 
+/* Shadows */
 .box-shadow {
-  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+  box-shadow: var(--card-shadow);
 }
 
+/* Sidebar Animation */
 .sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
+/* Slide Animation Keyframes */
 @keyframes slide-top {
   0% {
-    -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
+/* Feature Card Hover */
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
 }
 
+/* Feedback Card */
 .feedback-container .feedback-card:last-child {
   margin-right: 0px;
 }
@@ -124,6 +115,7 @@
   background: var(--black-gradient);
 }
 
+/* Blurred Gradients */
 .blue__gradient {
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
   filter: blur(123px);
