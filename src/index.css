@@ -1,3 +1,4 @@
+/* Import Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 /* Tailwind Directives */
@@ -129,4 +130,24 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+/* Sayfanın %75'inin Siyah Olması İçin Güncelleme */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #11101d; /* Arka planı %75 siyah */
+  color: white; /* Yazı rengi beyaz */
+}
+
+/* İçeriğin %75'ini siyah yapmak */
+.main-content {
+  height: 75%;
+  background-color: #11101d; /* Siyah arka plan */
+}
+
+/* Geri kalan kısmı farklı bir renk veya özellik ile ayarlayabilirsiniz */
+.secondary-content {
+  height: 25%;
+  background-color: #f5f5f5; /* Örneğin açık gri, tercihinize göre değiştirilebilir */
 }
