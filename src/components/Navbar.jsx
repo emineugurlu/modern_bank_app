@@ -1,15 +1,20 @@
-import { useState } from "react"
+import { logo } from "../assets";
+import { navLinks } from "../constants";
 
-import {close, logo,menu} from '../assets'
-import { navLinks } from '../constants'
 const Navbar = () => {
   return (
-   <nav className="w-full flex py-6 justify-between items-center ">
-    <img  src ={logo} alt="hookbank"
-    className="w-[124px] h-[32px]"/>
-    <ul className="list-none sm:flex hidden justify-end items-center flex-1"></ul>
-   </nav>
-  )
-}
+    <div className="w-full bg-primary py-4 px-6 flex items-center justify-between">
+      <img src={logo} alt="Logo" className="w-[124px] h-[32px]" />
 
-export default Navbar
+      <ul className="flex flex-row gap-6 text-white">
+        {navLinks.map((nav) => (
+          <li key={nav.id}>
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Navbar;
