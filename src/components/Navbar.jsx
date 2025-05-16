@@ -7,8 +7,13 @@ const Navbar = () => {
       <img src={logo} alt="Logo" className="w-[124px] h-[32px]" />
 
       <ul className="flex flex-row gap-6 text-white">
-        {navLinks.map((nav) => (
-          <li key={nav.id}>
+        {navLinks.map((nav, index) => (
+          <li
+            key={nav.id}
+            className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+              index === navLinks.length - 1 ? "mr-0" : "mr-10"
+            }`}
+          >
             <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
