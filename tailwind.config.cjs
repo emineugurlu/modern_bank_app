@@ -1,9 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html", // HTML dosyasını dahil et
-    "./src/**/*.{js,jsx,ts,tsx}", // JS, JSX, TS ve TSX dosyalarını dahil et
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  mode: "jit",
   theme: {
     extend: {
       colors: {
@@ -13,17 +11,17 @@ module.exports = {
         dimBlue: "rgba(9, 151, 124, 0.1)",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"], // Poppins fontu
+        poppins: ["Poppins", "sans-serif"],
       },
     },
-     screens: {
+    screens: {
+      xs: "480px",
+      ss: "620px",
       sm: "768px",
       md: "1060px",
       lg: "1200px",
       xl: "1700px",
     },
-
-
   },
   plugins: [],
 };
