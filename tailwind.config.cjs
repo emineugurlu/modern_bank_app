@@ -16,14 +16,14 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"], // Poppins fontu
       },
     },
-    screens: {
-      xs: "480px", // ekstra küçük ekran boyutu
-      ss: "620px", // özel ekran boyutu
-      sm: "768px", // küçük ekran
-      md: "1060px", // orta ekran
-      lg: "1200px", // büyük ekran
-      xl: "1700px", // ekstra büyük ekran
+     screens: {
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
     },
+
+
   },
   plugins: [],
 };
