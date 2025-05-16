@@ -28,8 +28,26 @@ const Navbar = () => {
           src={toggle ? close : menu}
           alt="menu"
           className="w-[28px] h-[28px] object-contain cursor-pointer"
-          onClick={() => setToggle(!toggle)}
+          onClick={() => setToggle((prev) => !prev)}
         />
+      </div>
+      <div
+        className={`${
+          toggle ? "flex" : "hidden"
+        } py-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+      >
+        <ul className="sm:flex hidden flex-row gap-6 text-white">
+          {navLinks.map((nav, index) => (
+            <li
+              key={nav.id}
+              className={`font-poppins font-normal cursor-pointer text-[16px] ${
+                index === navLinks.length - 1 ? "mr-0" : "mr-10"
+              }`}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
